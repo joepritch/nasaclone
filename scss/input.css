@@ -1,13 +1,31 @@
 body {
   background-color: black;
   color: white;
+  padding: 0px;
+  margin: 0px;
   font-family: monospace;
+}
+
+img {
+  float: left;
+  margin-top: 13px;
+  margin-left: 13px;
+}
+
+.nav {
+  max-width: 1353px;
+  margin: auto;
+  background-image: url(../img/navbackground.png);
+  background-size: cover;
 }
 
 .navBar {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
   max-width: 1353px;
+  margin: auto;
 }
 
 .topNav {
@@ -15,32 +33,114 @@ body {
   flex-direction: row;
 }
 .topNav p {
-  align-self: center;
   padding: 15px;
   border-right: solid 1px grey;
 }
 .topNav .search {
   display: flex;
   justify-content: center;
-  align-self: center;
   padding: 15px;
 }
 .topNav .search input {
-  background-color: gray;
+  background-color: grey;
   margin: 0px;
   border: transparent 0px;
 }
 .topNav .search button {
-  background-color: gray;
+  background-color: grey;
   margin: 0px;
   border: transparent 0px;
+}
+
+.bottomNav {
+  display: flex;
+  flex-direction: row;
+}
+.bottomNav p {
+  padding: 15px;
+  border-right: solid 1px grey;
+  background-color: darkgrey;
 }
 
 .mainContent {
   max-width: 1353px;
   margin: auto;
-  border: solid 1px white;
-  height: 100vh;
+}
+
+.item1 {
+  grid-area: rover;
+  background-image: url(../img/rover.png);
+  background-size: cover;
+  width: 668px;
+  height: 615px;
+}
+
+.item2 {
+  grid-area: mass;
+  background-image: url(../img/mass.png);
+  width: 327px;
+  height: 300px;
+}
+
+.item3 {
+  grid-area: events;
+  width: 327px;
+  height: 300px;
+}
+
+.item4 {
+  grid-area: glenn;
+  background-image: url(../img/glenn.png);
+  width: 668px;
+  height: 300px;
+}
+
+.item5 {
+  grid-area: tech;
+}
+
+.item6 {
+  grid-area: moon;
+}
+
+.item7 {
+  grid-area: twitter;
+}
+
+.item8 {
+  grid-area: opportunity;
+}
+
+.item9 {
+  grid-area: mission;
+}
+
+.item10 {
+  grid-area: mars;
+}
+
+.item11 {
+  grid-area: insight;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-areas: "rover rover mass events" "rover rover glenn glenn" "tech moon moon twitter" "opportunity mission mars insight";
+}
+.gridContainer * {
+  margin: 8px;
+}
+
+.gridContainer > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 30px;
+}
+
+.title {
+  float: left;
+  background-color: rgba(0, 10, 250, 0.5);
+  margin: 0px;
 }
 
 /*# sourceMappingURL=input.css.map */
