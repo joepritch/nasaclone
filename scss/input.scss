@@ -46,9 +46,11 @@ img {
     padding: 15px;
     input {
       @include search;
+      padding-left: 10px;
     }
     button {
       @include search;
+      cursor: pointer;
     }
   }
 }
@@ -70,57 +72,79 @@ img {
 
 .item1 {
   grid-area: rover;
+  @include gridItem;
+  height: 632px;
   background-image: url(../img/rover.png);
-  background-size: cover;
-  width: 668px;
-  height: 615px;
+
 }
 .item2 {
   grid-area: mass;
+  @include gridItem;
   background-image: url(../img/mass.png);
-  width: 327px;
-  height: 300px;
 }
 .item3 {
   grid-area: events;
-  width: 327px;
-  height: 300px;
+  @include gridItem;
+  background-image: url(../img/mass.png);
 }
 .item4 {
   grid-area: glenn;
+  @include gridItem;
   background-image: url(../img/glenn.png);
-  width: 668px;
-  height: 300px;
 }
-.item5 { grid-area: tech; }
-.item6 { grid-area: moon; }
-.item7 { grid-area: twitter; }
-.item8 { grid-area: opportunity; }
-.item9 { grid-area: mission; }
-.item10 { grid-area: mars; }
-.item11 { grid-area: insight; }
+.item5 {
+  grid-area: tech;
+  @include gridItem;
+  background-image: url(../img/tech.png);
+}
+.item6 {
+  grid-area: moon;
+  @include gridItem;
+  background-image: url(../img/moon.png);
+}
+.item7 {
+  grid-area: twitter;
+  @include gridItem;
+  width: 10%;
+  margin-right: 0%;
+  padding-right: 0%;
+  display: inline-block;
+  float: right;
+}
+.item8 {
+  grid-area: opportunity;
+  @include gridItem;
+  background-image: url(../img/opportunity.png);
+}
+.item9 {
+  grid-area: mission;
+  @include gridItem;
+  background-image: url(../img/mission.png);
+}
+.item10 {
+  grid-area: mars;
+  @include gridItem;
+  background-image: url(../img/mars.png);
+}
+.item11 {
+  grid-area: insight;
+  @include gridItem;
+  background-image: url(../img/insight.png);
+}
 
 .gridContainer {
+  width: 100%;
   display: grid;
   grid-template-areas:
     'rover rover mass events'
     'rover rover glenn glenn'
     'tech moon moon twitter'
     'opportunity mission mars insight';
-  * {
-    margin: 8px;
-  }
 }
 
-.gridContainer > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  font-size: 30px;
-}
 
 
 .title {
-  float: left;
   background-color: rgba(0, 10, 250, .5);
   margin: 0px;
 }
