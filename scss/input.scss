@@ -1,0 +1,45 @@
+@import "_variables";
+@import "_mixins";
+
+body {
+  background-color: black;
+  color: white;
+  font: {
+    family: monospace;
+  }
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  max-width: $width;
+}
+
+.topNav {
+  display: flex;
+  flex-direction: row;
+  p {
+    align-self: center;
+    padding: 15px;
+    border-right: solid 1px grey;
+  }
+  .search {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 15px;
+    input {
+      @include search;
+    }
+    button {
+      @include search;
+    }
+  }
+}
+
+.mainContent {
+  max-width: $width;
+  margin: auto;
+  border: solid 1px white;
+  height: 100vh;
+}

@@ -1,0 +1,46 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: monospace;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  max-width: 1353px;
+}
+
+.topNav {
+  display: flex;
+  flex-direction: row;
+}
+.topNav p {
+  align-self: center;
+  padding: 15px;
+  border-right: solid 1px grey;
+}
+.topNav .search {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 15px;
+}
+.topNav .search input {
+  background-color: gray;
+  margin: 0px;
+  border: transparent 0px;
+}
+.topNav .search button {
+  background-color: gray;
+  margin: 0px;
+  border: transparent 0px;
+}
+
+.mainContent {
+  max-width: 1353px;
+  margin: auto;
+  border: solid 1px white;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=input.css.map */
