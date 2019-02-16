@@ -1,7 +1,12 @@
 @mixin search {
-  background-color: grey;
+  background-color: rgb(51, 51, 51);
+  color: rgb(170,170,170);
   margin: 0px;
-  border: transparent 0px;
+  border: none;
+  height: 40px;
+  align-self: flex-end;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 
@@ -11,4 +16,5 @@
   height: 316px;
   border: solid 8px black;
   background-size: cover;
+  background-position: center;
 }

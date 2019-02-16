@@ -3,7 +3,7 @@ body {
   color: white;
   padding: 0px;
   margin: 0px;
-  font-family: monospace;
+  font-family: "Titillium Web", sans-serif;
 }
 
 img {
@@ -13,16 +13,15 @@ img {
 }
 
 .nav {
-  max-width: 1353px;
-  margin: auto;
+  width: 1353px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
   background-image: url(../img/navbackground.png);
   background-size: cover;
 }
 
 .navBar {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
   max-width: 1353px;
   margin: auto;
@@ -30,11 +29,19 @@ img {
 
 .topNav {
   display: flex;
+  justify-content: flex-end;
   flex-direction: row;
 }
 .topNav p {
+  align-self: center;
+  font-size: 22px;
   padding: 15px;
-  border-right: solid 1px grey;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-right: solid 2px #555555;
+}
+.topNav p:nth-child(7n) {
+  border: none;
 }
 .topNav .search {
   display: flex;
@@ -42,52 +49,69 @@ img {
   padding: 15px;
 }
 .topNav .search input {
-  background-color: grey;
+  background-color: #333333;
+  color: #aaaaaa;
   margin: 0px;
-  border: transparent 0px;
+  border: none;
+  height: 40px;
+  align-self: flex-end;
+  padding-top: 0px;
+  padding-bottom: 0px;
   padding-left: 10px;
+  width: 112px;
 }
 .topNav .search button {
-  background-color: grey;
+  background-color: #333333;
+  color: #aaaaaa;
   margin: 0px;
-  border: transparent 0px;
+  border: none;
+  height: 40px;
+  align-self: flex-end;
+  padding-top: 0px;
+  padding-bottom: 0px;
   cursor: pointer;
 }
 
 .bottomNav {
   display: flex;
+  justify-content: center;
   flex-direction: row;
 }
 .bottomNav p {
-  padding: 15px;
-  border-right: solid 1px grey;
-  background-color: darkgrey;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #555555;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .mainContent {
   max-width: 1353px;
   margin: auto;
+  padding-top: 120px;
 }
 
 .item1 {
   grid-area: rover;
+  background-image: url(../img/rover.png);
   box-sizing: border-box;
   width: 100%;
   height: 316px;
   border: solid 8px black;
   background-size: cover;
+  background-position: center;
   height: 632px;
-  background-image: url(../img/rover.png);
 }
 
 .item2 {
   grid-area: mass;
+  background-image: url(../img/mass.png);
   box-sizing: border-box;
   width: 100%;
   height: 316px;
   border: solid 8px black;
   background-size: cover;
-  background-image: url(../img/mass.png);
+  background-position: center;
 }
 
 .item3 {
@@ -97,37 +121,41 @@ img {
   height: 316px;
   border: solid 8px black;
   background-size: cover;
-  background-image: url(../img/mass.png);
+  background-position: center;
+  background-color: #38719c;
 }
 
 .item4 {
   grid-area: glenn;
+  background-image: url(../img/glenn.png);
   box-sizing: border-box;
   width: 100%;
   height: 316px;
   border: solid 8px black;
   background-size: cover;
-  background-image: url(../img/glenn.png);
+  background-position: center;
 }
 
 .item5 {
   grid-area: tech;
+  background-image: url(../img/tech.png);
   box-sizing: border-box;
   width: 100%;
   height: 316px;
   border: solid 8px black;
   background-size: cover;
-  background-image: url(../img/tech.png);
+  background-position: center;
 }
 
 .item6 {
   grid-area: moon;
+  background-image: url(../img/moon.png);
   box-sizing: border-box;
   width: 100%;
   height: 316px;
   border: solid 8px black;
   background-size: cover;
-  background-image: url(../img/moon.png);
+  background-position: center;
 }
 
 .item7 {
@@ -137,51 +165,51 @@ img {
   height: 316px;
   border: solid 8px black;
   background-size: cover;
-  width: 10%;
-  margin-right: 0%;
-  padding-right: 0%;
-  display: inline-block;
-  float: right;
+  background-position: center;
 }
 
 .item8 {
   grid-area: opportunity;
+  background-image: url(../img/opportunity.png);
   box-sizing: border-box;
   width: 100%;
   height: 316px;
   border: solid 8px black;
   background-size: cover;
-  background-image: url(../img/opportunity.png);
+  background-position: center;
 }
 
 .item9 {
   grid-area: mission;
+  background-image: url(../img/mission.png);
   box-sizing: border-box;
   width: 100%;
   height: 316px;
   border: solid 8px black;
   background-size: cover;
-  background-image: url(../img/mission.png);
+  background-position: center;
 }
 
 .item10 {
   grid-area: mars;
+  background-image: url(../img/mars.png);
   box-sizing: border-box;
   width: 100%;
   height: 316px;
   border: solid 8px black;
   background-size: cover;
-  background-image: url(../img/mars.png);
+  background-position: center;
 }
 
 .item11 {
   grid-area: insight;
+  background-image: url(../img/insight.png);
   box-sizing: border-box;
   width: 100%;
   height: 316px;
   border: solid 8px black;
   background-size: cover;
-  background-image: url(../img/insight.png);
+  background-position: center;
 }
 
 .gridContainer {
@@ -191,8 +219,77 @@ img {
 }
 
 .title {
-  background-color: rgba(0, 10, 250, 0.5);
-  margin: 0px;
+  background-color: rgba(56, 113, 155, 0.8);
+  padding-left: 15px;
+  width: 25%;
+  position: relative;
+  top: 236px;
+}
+
+.subtext {
+  background-color: rgba(250, 250, 250, 0.8);
+  color: black;
+  padding-left: 15px;
+  position: relative;
+  top: 220px;
+}
+
+.item1 .title {
+  top: 552px;
+}
+.item1 .subtext {
+  top: 536px;
+}
+
+.item3 .title {
+  top: 0px;
+}
+
+@media only screen and (max-width: 1350px) {
+  .nav {
+    width: 1000px;
+  }
+
+  .topNav p {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .nav {
+    width: 100%;
+  }
+
+  .topNav p {
+    display: none;
+  }
+
+  .bottomNav p {
+    display: none;
+  }
+
+  .item1 {
+    height: 316px;
+    background-position: top;
+  }
+  .item1 .title {
+    top: 236px;
+  }
+  .item1 .subtext {
+    top: 220px;
+  }
+
+  .gridContainer {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "rover rover" "mass events" "glenn tech" "moon twitter" "opportunity mission" "mars insight";
+  }
+}
+@media only screen and (max-width: 720px) {
+  .gridContainer {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "rover" "mass" "events" "glenn" "tech" "moon" "twitter" "opportunity" "mission" "mars" "insight";
+  }
 }
 
 /*# sourceMappingURL=input.css.map */
